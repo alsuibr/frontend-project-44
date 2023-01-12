@@ -2,6 +2,10 @@
 
 import askNameAndGreet from '../src/cli.js';
 
-console.log("Welcome to the Brain Games!");
+const welcomingMessage = () => {
+    console.log("Welcome to the Brain Games!");
+};
 
 askNameAndGreet();
+
+export default welcomingMessage;
