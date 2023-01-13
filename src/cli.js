@@ -5,5 +5,7 @@ const askNameAndGreet = () => {
 console.log('Hello, ' + playerName + '!');
 };
 
+askNameAndGreet();
+
 export default askNameAndGreet;
 

@@ -6,6 +6,7 @@ const welcomingMessage = () => {
     console.log("Welcome to the Brain Games!");
 };
 
+welcomingMessage();
 askNameAndGreet();
 
 export default welcomingMessage;
