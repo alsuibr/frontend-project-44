@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import { playerName } from "../src/cli.js";
+import gameIntro from "../src/cli.js";
 
 const gameEven = () => {
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -39,6 +40,9 @@ for (let i = 0; i < 3; i = i + 1) {
     }
 }
 };
+
+gameIntro();
+gameEven();
 
 export { gameEven };
 
