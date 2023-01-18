@@ -1,13 +1,7 @@
 #!/usr/bin/env node
 
-const welcomingMessage = () => {
-    console.log("Welcome to the Brain Games!");
-};
+import gameIntro from '../src/cli.js';
+import { gameEven } from './brain-even.js';
 
-welcomingMessage();
-
-import { getPlayerNameAndGreet } from '../src/cli.js';
-
-// getPlayerNameAndGreet();
-
-export default welcomingMessage;
+gameIntro();
+gameEven();

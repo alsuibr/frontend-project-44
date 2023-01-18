@@ -1,63 +1,44 @@
 import readlineSync from 'readline-sync';
-import welcomingMessage from './brain-games.js';
-import askNameAndGreet from '../src/cli.js';
-import { playerName } from '../src/cli.js';
+import { playerName } from "../src/cli.js";
 
-welcomingMessage();
-askNameAndGreet();
+const gameEven = () => {
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const evenGameRules = () => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".')
-}
-
-let randomNumber;
 const getRandomNumber = (min, max) => {
-    randomNumber = Math.random() * (max - min) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-const questionForEvenGame = "Question: " + randomNumber;
+for (let i = 0; i < 3; i = i + 1) {
 
-const usersAnswer = readlineSync.question(questionForEvenGame);
+    let randomNumber = getRandomNumber(1, 101);
+    console.log(`Question: ${randomNumber}`);
 
-const showUsersAnswer = "Your answer: " + usersAnswer;
-
-let correctAnswer;
-randomNumber.isEven() ? correctAnswer = 'yes' : correctAnswer = 'no';
-
-const evenRoundWonMessage = () => {
-    console.log('Correct!');
-}
-
-const evenFailedMessage = () => {
-    console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`)
-}
-
-const evenUltimateWinMessage = () => {
-    console.log(`Congratulations, ${playerName}!`)
-}
-
-const playEven = () => {
-    evenGameRules();
-    for (let i = 0; i < 3; i = i + 1) {
-        getRandomNumber(1, 101);
-        console.log(questionForEvenGame);
-        console.log(showUsersAnswer);
-        if (correctAnswer !== usersAnswer) {
-            evenFailedMessage();
-            break;
-        }
-        else {
-            evenRoundWonMessage();
-        }
+    let usersAnswer;
+    const getAnswer = () => {
+        usersAnswer = readlineSync.question(`Your answer: `);
     }
-    evenUltimateWinMessage();
+    getAnswer();
+
+    let correctAnswer;
+    randomNumber % 2 === 0 ? correctAnswer = 'yes' : correctAnswer = 'no';
+
+    if (usersAnswer !== correctAnswer) {
+        console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
+        break;
+        i === 3;
+    }
+
+    if (usersAnswer === correctAnswer) {
+        console.log('Correct!');
+    }
+
+    if (i === 2) {
+        console.log(`Congratulations, ${ playerName }!`);
+    }
 }
+};
 
-playEven();
-
-
-
-
-
-
+export { gameEven };
 
