@@ -3,30 +3,22 @@
 import readlineSync from 'readline-sync';
 import { playerName } from "../src/cli.js";
 
-// let explainTheGame; //different for each game, will be defined in each game separately
+const runEngine = (gameExplanation, generateTheQuestion(), getCorrectAnswer()) => {
 
-// function generateTheQuestion(); 
-//different for each game, will be defined in each game separately
+    console.log(gameExplanation);
 
-// function getCorrectAnswer();
-//different for each game, will be defined in each game separately
-
-const runAnyGame = () => {
-    console.log(explainTheGame);
     for (let i = 0; i < 3; i = i + 1) {
         
-        let usersAnswer;
-        let correctAnswer;
-
         console.log(`Question: ${generateTheQuestion()}`);
-
+        
+        let usersAnswer;
         const getUsersAnswer = () => {
             usersAnswer = readlineSync.question(`Your answer: `);
-         };
-
+        };
         getUsersAnswer();
         
-        let correctAnswer = getCorrectAnswer();
+        let correctAnswer;
+        getCorrectAnswer();
 
         if (usersAnswer !== correctAnswer) {
             console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
@@ -41,4 +33,4 @@ const runAnyGame = () => {
     }
 };
 
-export { runAnyGame };
+export { runEngine };

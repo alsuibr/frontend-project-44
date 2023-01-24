@@ -1,33 +1,35 @@
+import { getRandomNumber } from "../utils.js";
 
-   let explainTheGame = 'What is the result of the expression?';
+const getCalcParametersForEngine = () => {
     
-    const operators = ['+', '-', '*']; 
-    const getRandomOperator = (operators) => {
-        return randomOperator = Math.floor(Math.random()*operators.length)
-    };
-
-    let expression;
+    let gameExplanation = 'What is the result of the expression?';
     let randomNumber1;
     let randomNumber2;
     let randomOperator;
 
-    generateTheQuestion = () => {
+    const generateTheQuestion = () => {
+        
+        const operators = ['+', '-', '*']; 
+        const getRandomOperator = (operators) => {
+        return Math.floor(Math.random() * operators.length)
+        };
+
         randomNumber1 = getRandomNumber(1, 11);
         randomNumber2 = getRandomNumber(1, 11);
         randomOperator = getRandomOperator(operators);
-        expression = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-        return expression;
-    };
-
-    getCorrectAnswer = () => {
-        switch (randomOperator) {
-            case '+' :
-                return (randomNumber1 + randomNumber2);
-            case '-' :
-                return (randomNumber1 + randomNumber2);
-            case "*" :
-                return (randomNumber1 * randomNumber2)
-        }
+        return `${randomNumber1} ${randomOperator} ${randomNumber2}`;
     }
 
-    export { explainTheGame , generateTheQuestion, getCorrectAnswer };
+    const getCorrectAnswer = () => {
+        switch (randomOperator) {
+            case '+' :
+                return toString((randomNumber1 + randomNumber2));
+            case '-' :
+                return toString((randomNumber1 - randomNumber2));
+            case "*" :
+                return toString((randomNumber1 * randomNumber2));
+        }
+    }
+}
+
+export { getCalcParametersForEngine };
