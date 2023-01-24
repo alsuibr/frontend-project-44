@@ -1,6 +1,5 @@
-import { explainTheGame, getRandomNumber, generateTheQuestion, getCorrectAnswer, runAnyGame } from '../src/index.js'
 
-    explainTheGame = 'What is the result of the expression?';
+   let explainTheGame = 'What is the result of the expression?';
     
     const operators = ['+', '-', '*']; 
     const getRandomOperator = (operators) => {
@@ -20,8 +19,15 @@ import { explainTheGame, getRandomNumber, generateTheQuestion, getCorrectAnswer,
         return expression;
     };
 
-    let correctAnswer = eval(expression);
-    
-    runAnyGame();
+    getCorrectAnswer = () => {
+        switch (randomOperator) {
+            case '+' :
+                return (randomNumber1 + randomNumber2);
+            case '-' :
+                return (randomNumber1 + randomNumber2);
+            case "*" :
+                return (randomNumber1 * randomNumber2)
+        }
+    }
 
-
+    export { explainTheGame , generateTheQuestion, getCorrectAnswer };
