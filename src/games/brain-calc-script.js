@@ -1,7 +1,6 @@
 import { getRandomNumber } from "../utils.js";
 
 const getCalcParametersForEngine = () => {
-    
     let gameExplanation = 'What is the result of the expression?';
     let randomNumber1;
     let randomNumber2;
@@ -19,17 +18,17 @@ const getCalcParametersForEngine = () => {
         randomOperator = getRandomOperator(operators);
         return `${randomNumber1} ${randomOperator} ${randomNumber2}`;
     }
-
+    
     const getCorrectAnswer = () => {
         switch (randomOperator) {
             case '+' :
-                return toString((randomNumber1 + randomNumber2));
+                return (randomNumber1 + randomNumber2).toString();
             case '-' :
-                return toString((randomNumber1 - randomNumber2));
+                return (randomNumber1 - randomNumber2).toString();
             case "*" :
-                return toString((randomNumber1 * randomNumber2));
+                return (randomNumber1 * randomNumber2).toString();
         }
     }
 }
 
-export { getCalcParametersForEngine };
+export { getCalcParametersForEngine , gameExplanation , generateTheQuestion, getCorrectAnswer };

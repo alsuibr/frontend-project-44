@@ -3,12 +3,12 @@
 import readlineSync from 'readline-sync';
 import { playerName } from "../src/cli.js";
 
-const runEngine = (gameExplanation, generateTheQuestion(), getCorrectAnswer()) => {
+const runEngine = (gameExplanation, generateTheQuestion, getCorrectAnswer) => {
 
     console.log(gameExplanation);
 
     for (let i = 0; i < 3; i = i + 1) {
-        
+
         console.log(`Question: ${generateTheQuestion()}`);
         
         let usersAnswer;
@@ -17,8 +17,7 @@ const runEngine = (gameExplanation, generateTheQuestion(), getCorrectAnswer()) =
         };
         getUsersAnswer();
         
-        let correctAnswer;
-        getCorrectAnswer();
+        let correctAnswer = getCorrectAnswer();
 
         if (usersAnswer !== correctAnswer) {
             console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
