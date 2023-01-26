@@ -1,6 +1,7 @@
 import { getRandomNumber } from "../utils.js";
+import { runEngine } from "../index.js";
 
-const getCalcParametersForEngine = () => {
+const getCalcParamAndRunEngine = () => {
     let gameExplanation = 'What is the result of the expression?';
     let randomNumber1;
     let randomNumber2;
@@ -10,7 +11,7 @@ const getCalcParametersForEngine = () => {
         
         const operators = ['+', '-', '*']; 
         const getRandomOperator = (operators) => {
-        return Math.floor(Math.random() * operators.length)
+        return operators[Math.floor(Math.random() * operators.length)]
         };
 
         randomNumber1 = getRandomNumber(1, 11);
@@ -29,6 +30,9 @@ const getCalcParametersForEngine = () => {
                 return (randomNumber1 * randomNumber2).toString();
         }
     }
+runEngine (gameExplanation , generateTheQuestion, getCorrectAnswer);
+
 }
 
-export { getCalcParametersForEngine , gameExplanation , generateTheQuestion, getCorrectAnswer };
+
+export { getCalcParamAndRunEngine };

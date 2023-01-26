@@ -7,5 +7,4 @@ const gameIntro = () => {
     console.log('Hello, ' + playerName + '!');
 };
 
-export default gameIntro;
-export { playerName };
+export { gameIntro, playerName };

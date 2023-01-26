@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { getCalcParametersForEngine , gameExplanation, generateTheQuestion, getCorrectAnswer } from "../src/games/brain-calc-script.js";
-import { runEngine  } from "../src/index.js";
+import { getCalcParamAndRunEngine } from "../src/games/brain-calc-code.js";
 
-getCalcParametersForEngine();
-runEngine(gameExplanation, generateTheQuestion, getCorrectAnswer);
+getCalcParamAndRunEngine();

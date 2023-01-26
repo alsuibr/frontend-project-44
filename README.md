@@ -6,3 +6,5 @@
 //link to asciinema, project 1, step 5, brain-even
 https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti
 
+//link to asciinema, project 1, step 6, brain-calc
+https://asciinema.org/a/Q7aKUPcF5B6s3F0h4Cmz9PkCm

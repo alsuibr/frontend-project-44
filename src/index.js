@@ -1,10 +1,10 @@
 //С введением второй игры у вас появляется общая для всех игр логика (Эту логику стоит поместить в файл src/index.js
 //
 import readlineSync from 'readline-sync';
-import { playerName } from "../src/cli.js";
+import { gameIntro, playerName } from "../src/cli.js";
 
 const runEngine = (gameExplanation, generateTheQuestion, getCorrectAnswer) => {
-
+    gameIntro();
     console.log(gameExplanation);
 
     for (let i = 0; i < 3; i = i + 1) {
