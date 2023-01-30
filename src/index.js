@@ -15,6 +15,7 @@ const runEngine = (gameExplanation, generateTheQuestion, getCorrectAnswer) => {
         const getUsersAnswer = () => {
             usersAnswer = readlineSync.question(`Your answer: `);
         };
+
         getUsersAnswer();
         
         let correctAnswer = getCorrectAnswer();
@@ -23,9 +24,10 @@ const runEngine = (gameExplanation, generateTheQuestion, getCorrectAnswer) => {
             console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
             break;
         }
-        if (usersAnswer === correctAnswer) {
+        else {
             console.log('Correct!');
         }
+        
         if (i === 2) {
             console.log(`Congratulations, ${ playerName }!`);
         }

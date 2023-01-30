@@ -7,7 +7,6 @@ const getGCDparamAndRunEngine = () => {
     let randomNumber1;
     let randomNumber2;
     let gcd;
-    let answer;
 
     const generateTheQuestion = () => {
         randomNumber1 = getRandomNumber(1, 31);
