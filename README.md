@@ -3,6 +3,11 @@
 
 <a href="https://codeclimate.com/github/alsuibr/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/64729f5a99f88a181665/maintainability" /></a>
 
+//This console game is an educational project on Javascript.
+//Node.js is required to run the project.
+//Here is the example to demonstrate what the project is supposed to be:
+https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7
+
 //link to asciinema, project 1, step 5, brain-even
 https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti
 
