@@ -9,5 +9,8 @@ https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti
 //link to asciinema, project 1, step 6, brain-calc
 https://asciinema.org/a/Q7aKUPcF5B6s3F0h4Cmz9PkCm
 
-////link to asciinema, project 1, step 7, brain-gcd
+//link to asciinema, project 1, step 7, brain-gcd
 https://asciinema.org/a/J5tznOkxwRUAPPRseeVPelyY0
+
+//link to asciinema, project 1, step 8, brain-progression
+https://asciinema.org/a/pqVX8hdiR65JtbvXfLWwGXXCf
