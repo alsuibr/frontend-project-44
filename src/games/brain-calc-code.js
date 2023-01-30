@@ -29,10 +29,9 @@ const getCalcParamAndRunEngine = () => {
             case "*" :
                 return (randomNumber1 * randomNumber2).toString();
         }
-    }
+    };
 runEngine (gameExplanation , generateTheQuestion, getCorrectAnswer);
 
-}
-
+};
 
 export { getCalcParamAndRunEngine };

@@ -2,4 +2,4 @@
 
 import { getEvenParamAndRunEngine  } from "../src/games/brain-even-code.js";
 
-getEvenParamAndRunEngine ();
+getEvenParamAndRunEngine();

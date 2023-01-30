@@ -40,7 +40,7 @@ const getGCDparamAndRunEngine = () => {
     
         (randomNumber1 % randomNumber2 === 0 || randomNumber2 % randomNumber1 === 0) ? gcd = smallerNumber : getGCD(randomNumber1, randomNumber2);
         
-        return gcd.toString()
+        return gcd.toString();
     }
 
     runEngine(gameExplanation , generateTheQuestion, getCorrectAnswer);

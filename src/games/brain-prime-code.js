@@ -16,7 +16,7 @@ const getPrimeParamAndRunEngine = () => {
                 return 'no';
             }
         } 
-        return 'yes'
+        return 'yes';
     }
 
     runEngine (gameExplanation , generateTheQuestion, getCorrectAnswer);
