@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import gameIntro from "../src/cli.js";
-import { gameEven } from "./brain-even-script.js";
+import { getEvenParamAndRunEngine  } from "../src/games/brain-even-code.js";
 
-
-gameIntro();
-gameEven();
-
+getEvenParamAndRunEngine ();

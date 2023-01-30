@@ -14,3 +14,6 @@ https://asciinema.org/a/J5tznOkxwRUAPPRseeVPelyY0
 
 //link to asciinema, project 1, step 8, brain-progression
 https://asciinema.org/a/pqVX8hdiR65JtbvXfLWwGXXCf
+
+//link to asciinema, project 1, step 9, brain-prime
+https://asciinema.org/a/mG8gTpQsIvDCypllWE2pidON0
