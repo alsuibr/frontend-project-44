@@ -1,37 +1,32 @@
-//С введением второй игры у вас появляется общая для всех игр логика (Эту логику стоит поместить в файл src/index.js
-//
 import readlineSync from 'readline-sync';
-import { gameIntro, playerName } from "../src/cli.js";
 
 const runEngine = (gameExplanation, generateTheQuestion, getCorrectAnswer) => {
-    gameIntro();
-    console.log(gameExplanation);
+  console.log('Welcome to the Brain Games!');
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}`);
+  console.log(gameExplanation);
 
-    for (let i = 0; i < 3; i = i + 1) {
+  for (let i = 0; i < 3; i += 1) {
+    console.log(`Question: ${generateTheQuestion()}`);
+    let usersAnswer;
+    const getUsersAnswer = () => {
+      usersAnswer = readlineSync.question('Your answer: ');
+    };
 
-        console.log(`Question: ${generateTheQuestion()}`);
-        
-        let usersAnswer;
-        const getUsersAnswer = () => {
-            usersAnswer = readlineSync.question(`Your answer: `);
-        };
+    getUsersAnswer();
 
-        getUsersAnswer();
-        
-        let correctAnswer = getCorrectAnswer();
+    const correctAnswer = getCorrectAnswer();
 
-        if (usersAnswer !== correctAnswer) {
-            console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
-            break;
-        }
-        else {
-            console.log('Correct!');
-        }
-        
-        if (i === 2) {
-            console.log(`Congratulations, ${ playerName }!`);
-        }
+    if (usersAnswer !== correctAnswer) {
+      console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
+      break;
+    } else {
+      console.log('Correct!');
     }
+    if (i === 2) {
+      console.log(`Congratulations, ${playerName}!`);
+    }
+  }
 };
 
-export { runEngine };
+export default runEngine;
