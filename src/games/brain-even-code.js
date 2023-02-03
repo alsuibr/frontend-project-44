@@ -2,16 +2,16 @@ import getRandomNumber from '../utils.js';
 import runEngine from '../index.js';
 
 const getEvenParamAndRunEngine = () => {
+  let question;
+  let answer;
   const gameExplanation = 'Answer "yes" if the number is even, otherwise answer "no".';
-  let randomNumber;
-
-  const generateTheQuestion = () => {
-    randomNumber = getRandomNumber(1, 101);
-    return randomNumber;
+  const getQuestionAndAnswer = () => {
+    question = getRandomNumber(1, 101);
+    answer = (question % 2 === 0 ? 'yes' : 'no');
+    return [question, answer];
   };
-  const getCorrectAnswer = () => (randomNumber % 2 === 0 ? 'yes' : 'no');
-
-  runEngine(gameExplanation, generateTheQuestion, getCorrectAnswer);
+  getQuestionAndAnswer();
+  runEngine(gameExplanation, getQuestionAndAnswer);
 };
 
 export default getEvenParamAndRunEngine;

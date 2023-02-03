@@ -3,21 +3,14 @@ import runEngine from '../index.js';
 
 const getCalcParamAndRunEngine = () => {
   const gameExplanation = 'What is the result of the expression?';
-  let randomNumber1;
-  let randomNumber2;
-  let randomOperator;
 
-  const generateTheQuestion = () => {
+  const getQuestionAndAnswer = () => {
     const operators = ['+', '-', '*'];
-    const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+    const randomOperator = operators[Math.floor(Math.random() * operators.length)];
+    const randomNumber1 = getRandomNumber(1, 11);
+    const randomNumber2 = getRandomNumber(1, 11);
+    const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
 
-    randomNumber1 = getRandomNumber(1, 11);
-    randomNumber2 = getRandomNumber(1, 11);
-    randomOperator = getRandomOperator(operators);
-    return `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-  };
-
-  const getCorrectAnswer = () => {
     let answer;
     // eslint-disable-next-line default-case
     switch (randomOperator) {
@@ -31,10 +24,11 @@ const getCalcParamAndRunEngine = () => {
         answer = (randomNumber1 * randomNumber2).toString();
         break;
     }
-    return answer;
+
+    return [question, answer];
   };
 
-  runEngine(gameExplanation, generateTheQuestion, getCorrectAnswer);
+  runEngine(gameExplanation, getQuestionAndAnswer);
 };
 
 export default getCalcParamAndRunEngine;

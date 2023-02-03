@@ -3,43 +3,31 @@ import runEngine from '../index.js';
 
 const getGCDparamAndRunEngine = () => {
   const gameExplanation = 'Find the greatest common divisor of given numbers.';
-  let randomNumber1;
-  let randomNumber2;
-  let gcd;
+  const getQuestionAndAnswer = () => {
+    const randomNumber1 = getRandomNumber(1, 31);
+    const randomNumber2 = getRandomNumber(1, 31);
+    const question = `${randomNumber1} ${randomNumber2}`;
 
-  const generateTheQuestion = () => {
-    randomNumber1 = getRandomNumber(1, 31);
-    randomNumber2 = getRandomNumber(1, 31);
-    return `${randomNumber1} ${randomNumber2}`;
-  };
-
-  const getCorrectAnswer = () => {
-    let smallerNumber;
-    const commonDivisors = [];
-    if (randomNumber1 < randomNumber2) {
-      smallerNumber = randomNumber1;
-    }
-    if (randomNumber2 < randomNumber1) {
-      smallerNumber = randomNumber2;
-    }
-    if (randomNumber1 === randomNumber2) {
-      return randomNumber1.toString();
-      // if numbers are equal just return either of the numbers and dont go further to calculations
-    }
+    const smallerNumber = (randomNumber1 < randomNumber2 ? randomNumber1 : randomNumber2);
 
     const getGCD = () => {
+      const commonDivisors = [];
       for (let i = 1; i <= (smallerNumber / 2); i += 1) {
         if (randomNumber1 % i === 0 && randomNumber2 % i === 0) {
           commonDivisors.push(i);
         }
       }
-      gcd = commonDivisors[commonDivisors.length - 1];
+      return commonDivisors[commonDivisors.length - 1].toString();
     };
-    // eslint-disable-next-line max-len, no-unused-expressions
-    (randomNumber1 % randomNumber2 === 0 || randomNumber2 % randomNumber1 === 0) ? gcd = smallerNumber : getGCD();
-    return gcd.toString();
+
+    // eslint-disable-next-line max-len
+    const answer = (randomNumber1 % randomNumber2 === 0 || randomNumber2 % randomNumber1 === 0 ? smallerNumber.toString() : getGCD());
+
+    return [question, answer];
   };
-  runEngine(gameExplanation, generateTheQuestion, getCorrectAnswer);
+
+  getQuestionAndAnswer();
+  runEngine(gameExplanation, getQuestionAndAnswer);
 };
 
 export default getGCDparamAndRunEngine;
