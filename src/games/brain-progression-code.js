@@ -1,29 +1,19 @@
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, generateProgression } from '../utils.js';
 import runEngine from '../index.js';
 
-const getProgresParamAndRunEngine = () => {
-  const gameExplanation = 'What number is missing in the progression?';
+const gameExplanation = 'What number is missing in the progression?';
 
-  const getQuestionAndAnswer = () => {
-    const progression = [];
-    const stepSize = getRandomNumber(0, 6);
-    const progressionLength = getRandomNumber(5, 11);
-    progression.push(getRandomNumber(0, 11));
+const getQuestionAndAnswer = () => {
+  const progression = generateProgression();
+  const hiddenIndex = getRandomNumber(0, progression.length);
+  const answer = progression[hiddenIndex].toString();
+  progression[hiddenIndex] = '..';
+  const question = progression.join(' ');
+  return [question, answer];
+};
 
-    for (let i = 1; i < progressionLength; i += 1) {
-      progression.push(progression[i - 1] + stepSize);
-    }
-
-    const copyOfProgression = [...progression];
-    const indexToHide = getRandomNumber(0, progression.length);
-    copyOfProgression[indexToHide] = '..';
-    const question = copyOfProgression.join(' ');
-    const answer = progression[indexToHide].toString();
-
-    return [question, answer];
-  };
-
+const startProgresGame = () => {
   runEngine(gameExplanation, getQuestionAndAnswer);
 };
 
-export default getProgresParamAndRunEngine;
+export default startProgresGame;

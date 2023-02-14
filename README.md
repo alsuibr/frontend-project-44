@@ -1,24 +1,36 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/alsuibr/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/alsuibr/frontend-project-44/actions)
 
+[![Local linter Status]()
+
+### Codeclimate status:
 <a href="https://codeclimate.com/github/alsuibr/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/64729f5a99f88a181665/maintainability" /></a>
 
-//This console game is an educational project on Javascript.
-//Node.js is required to run the project.
-//Here is the example to demonstrate what the project is supposed to be:
-https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7
+### About the Brain games project:
+This educational project is aimed to create a console math games. There are 5 games (all listed below in [examples](#1) section). To begin any game it's name should be entered to the console. After greetings the game rules will be explained. User will be promted to enter the answer to the given question, and then the answer will be evaluated. In each game up to 3 questions will be asked. To win a game all the 3 questions must be answered correctly. Wrong answer at any point of the game will end the game.
 
-//link to asciinema, project 1, step 5, brain-even
-https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti
+### Requirements:
+Node Package Manager
+Node.js
 
-//link to asciinema, project 1, step 6, brain-calc
-https://asciinema.org/a/Q7aKUPcF5B6s3F0h4Cmz9PkCm
+### Examples: {#1}
 
-//link to asciinema, project 1, step 7, brain-gcd
-https://asciinema.org/a/J5tznOkxwRUAPPRseeVPelyY0
+#### brain-even
+Is number even?
+<https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti>
 
-//link to asciinema, project 1, step 8, brain-progression
-https://asciinema.org/a/pqVX8hdiR65JtbvXfLWwGXXCf
+#### brain-calc
+Calculate the expression.
+<https://asciinema.org/a/Q7aKUPcF5B6s3F0h4Cmz9PkCm>
 
-//link to asciinema, project 1, step 9, brain-prime
-https://asciinema.org/a/mG8gTpQsIvDCypllWE2pidON0
+#### brain-gcd
+Find greatest common divisor of given numbers.
+<https://asciinema.org/a/J5tznOkxwRUAPPRseeVPelyY0>
+
+#### brain-progression
+Find number missing in the progression.
+<https://asciinema.org/a/pqVX8hdiR65JtbvXfLWwGXXCf>
+
+#### brain-prime
+Is number prime?
+<https://asciinema.org/a/mG8gTpQsIvDCypllWE2pidON0>

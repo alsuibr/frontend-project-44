@@ -6,20 +6,17 @@ const runEngine = (gameExplanation, getQuestionAndAnswer) => {
   console.log(`Hello, ${playerName}`);
   console.log(gameExplanation);
 
-  for (let i = 0; i < 3; i += 1) {
+  const roundsMax = 3;
+  for (let i = 0; i < roundsMax; i += 1) {
     const [question, answer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const usersAnswer = readlineSync.question('Your answer: ');
     if (usersAnswer !== answer) {
-      console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${playerName}!`);
-      break;
-    } else {
-      console.log('Correct!');
+      return console.log(`'${usersAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${playerName}!`);
     }
-    if (i === 2) {
-      console.log(`Congratulations, ${playerName}!`);
-    }
+    console.log('Correct!');
   }
+  return console.log(`Congratulations, ${playerName}!`);
 };
 
 export default runEngine;

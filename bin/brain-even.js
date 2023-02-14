@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getEvenParamAndRunEngine from '../src/games/brain-even-code.js';
+import startEvenGame from '../src/games/brain-even-code.js';
 
-getEvenParamAndRunEngine();
+startEvenGame();

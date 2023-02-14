@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getProgresParamAndRunEngine from '../src/games/brain-progression-code.js';
+import startProgresGame from '../src/games/brain-progression-code.js';
 
-getProgresParamAndRunEngine();
+startProgresGame();
