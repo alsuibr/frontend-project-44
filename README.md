@@ -12,7 +12,7 @@ Node.js
 
 ### Examples: <a name="### Examples: "></a>
 
-### brain-even {id=howtoplay}
+#### brain-even {#howtoplay}
 Is number even?
 <https://asciinema.org/a/AtJFcVEACoKDDsAGFTWonCYti>
 
