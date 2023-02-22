@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gameIntro from '../src/index.js';
+import greetAndMeet from '../src/cli.js';
 
-gameIntro();
+greetAndMeet();
